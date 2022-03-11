@@ -1,0 +1,40 @@
+//================================================================================
+input {
+	&.error {
+		border: rem(2) solid $darkColor;
+		&::placeholder {
+			color: $accentColor;
+		}
+	}
+}
+.form__error {
+	margin-top: rem(10);
+	font-weight: 700;
+	font-size: rem(14);
+	color: $darkColor;
+}
+.form {
+	display: grid;
+	gap: rem(10);
+	// .form__item
+	&__item {
+	}
+	// .form__label
+	&__label {
+	}
+	// .form__input
+	&__input {
+		width: 100%;
+		padding: 0 rem(20);
+		min-height: rem(60);
+		border-radius: rem(5);
+		&::placeholder {
+			color: $textColor;
+		}
+	}
+	// .form__button
+	&__button {
+		border-radius: rem(5);
+	}
+}
+//================================================================================

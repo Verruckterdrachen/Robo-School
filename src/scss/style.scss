@@ -1,0 +1,108 @@
+@use "sass:math";
+
+// ПОДКЛЮЧЕНИЕ МИКСИНОВ ==========================================================
+@import "./base/mixins";
+
+// ПОДКЛЮЧЕНИЕ ШРИФТОВ ===========================================================
+//&display=swap
+
+@import "fonts";
+
+// ПОДКЛЮЧЕНИЕ ШРИФТОВ ===========================================================
+$fontFamily: "Jost";
+$fontSize: rem(18);
+$lineHeight: math.div(28, 18);
+
+$lightColor: #fff;
+$accentColor: #d52027;
+$darkColor: #141024;
+$textColor: rgba(#141024, 0.7);
+
+// НАСТРОЙКИ =====================================================================
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1160;
+$maxWidthContainerFluid: 1790;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+// ОБНУЛЕНИЕ И БАЗОВЫЕ СТИЛИ =====================================================
+@import "./base/null";
+
+body {
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+
+// ОБОЛОЧКА ======================================================================
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	> main {
+		flex: 1 1 auto;
+	}
+	> * {
+		min-width: 0;
+	}
+}
+
+// КОНТЕЙНЕР =====================================================================
+[class*="__container"] {
+	max-width: rem($maxWidthContainer);
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 rem(math.div($containerPadding, 2));
+}
+[class*="__container-fluid"] {
+	max-width: rem($maxWidthContainerFluid);
+}
+
+// ПОДКЛЮЧЕНИЕ КОМПОНЕНТОВ =======================================================
+@import "./base/base";
+
+// ПОДКЛЮЧЕНИЕ ОБЩИХ СТИЛЕЙ ======================================================
+@import "common";
+
+// ПОДКЛЮЧЕНИЕ БЛОКОВ ============================================================
+@import "header";
+@import "footer";
+
+// ПОДКЛЮЧЕНИЕ СТРАНИЦ ===========================================================
+@import "home";
+
+// ЭЛЕМЕНТЫ PAGE =================================================================
+.page {
+	// .page__about
+	&__about {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 120, 40);
+	}
+	// .page__advantages
+	&__advantages {
+		@include adaptiveValue("padding-top", 100, 40);
+		@include adaptiveValue("padding-bottom", 100, 40);
+	}
+	// .page__coaches
+	&__coaches {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 120, 40);
+	}
+	// .page__price
+	&__price {
+		@include adaptiveValue("padding-bottom", 110, 40);
+	}
+	// .page__callback
+	&__callback {
+		@include adaptiveValue("padding-top", 88, 40);
+		@include adaptiveValue("padding-bottom", 88, 40);
+	}
+}

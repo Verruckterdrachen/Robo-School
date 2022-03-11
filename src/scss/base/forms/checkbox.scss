@@ -1,0 +1,28 @@
+//================================================================================
+input[type="checkbox"]:not(.toggle) {
+	cursor: pointer;
+	appearance: none;
+	position: relative;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	width: rem(20);
+	height: rem(20);
+	margin-right: rem(10);
+	color: #000;
+	border: rem(2) solid currentColor;
+	&:checked {
+		background-color: currentColor;
+		// &::before {
+		// 	content: "";
+		// 	display: block;
+		// 	width: rem(12);
+		// 	height: rem(12);
+		// 	background-image: url("@img/icons/icons.svg#check");
+		// 	background-repeat: no-repeat;
+		// 	background-position: center;
+		// 	filter: invert(100%);
+		// }
+	}
+}
+//================================================================================

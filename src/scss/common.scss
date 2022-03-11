@@ -1,0 +1,116 @@
+// ГОТОВЫЕ КЛАССЫ ================================================================
+
+// Визуальное скрытие
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+}
+// Адаптивное изображение
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+// ОБЩИЕ КЛАССЫ ==================================================================
+.button {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: rem(80);
+	padding: 0 rem(54);
+	border-radius: rem(5);
+	color: #fff;
+	font-size: rem(18);
+	line-height: math.div(28, 18);
+	transition: color 0.3s, background-color 0.3s;
+	&.button--red {
+		background-color: $accentColor;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+				background-color: $lightColor;
+			}
+		}
+	}
+	&.button--dark {
+		background-color: $darkColor;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #000;
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		min-height: rem(60);
+	}
+}
+.logo {
+	// .logo__content
+	&__content {
+		color: $lightColor;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: rem(30);
+		line-height: math.div(28, 30);
+		@media (max-width: $tablet) {
+			font-size: rem(18);
+		}
+	}
+}
+.phone {
+	// .phone__content
+	&__content {
+		display: inline-block;
+		position: relative;
+		color: $lightColor;
+		font-weight: 600;
+		font-size: rem(30);
+		line-height: math.div(48, 30);
+		@media (max-width: $pc) {
+			font-size: rem(16);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: rem(3);
+			left: 0;
+			width: 100%;
+			height: rem(3);
+			transform: scaleX(0);
+			background-color: $accentColor;
+			transition: transform 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+.section-title {
+	color: $darkColor;
+	font-weight: 600;
+	@include adaptiveValue("font-size", 50, 34);
+	overflow-wrap: break-word;
+	line-height: math.div(80, 50);
+	@media (max-width: $mobile) {
+		text-align: center;
+	}
+}
+//================================================================================

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper" data-lp>
+		@@include('html/header.html',{})
+		<main class="page">
+			<section class="page__hero hero" data-fullscreen>
+				<div class="hero__container">
+					<div class="hero__body">
+						<h1 class="hero__title">Robo School</h1>
+						<p class="hero__desc">Курсы повышения квалификации по робототехнике для педагогов начальной школы</p>
+						<a href="#" class="hero__link button button--red">Записаться на курс</a>
+					</div>
+				</div>
+			</section>
+			<section class="page__about about">
+				<div class="about__container">
+					<h2 class="visually-hidden">О школе RoboSchool</h2>
+					<p class="about__desc">
+						<span>Robo School</span> – учреждение для формирования кадрового педагогического резерва в сфере робототехники и программирования
+					</p>
+					<ul class="about__list">
+						<li class="about__item">
+							<div class="about__digit">10</div>
+							<p class="about__text">УМК по различным направлениям по робототехнике</p>
+						</li>
+						<li class="about__item">
+							<div class="about__digit">20</div>
+							<p class="about__text">Школ, в которых запущена робототехника</p>
+						</li>
+						<li class="about__item">
+							<div class="about__digit">100</div>
+							<p class="about__text">Педагогов прошедших курсы повышения квалификации</p>
+						</li>
+						<li class="about__item">
+							<div class="about__digit">10 000</div>
+							<p class="about__text">Обученных детей на базе собственных центров</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="page__advantages advantages">
+				<div class="advantages__container">
+					<h2 class="advantages__title section-title">Что вы получите после курса</h2>
+					<ul class="advantages__list">
+						<li class="advantages__item">
+							<h3 class="advantages__subtitle">Удостоверение</h3>
+							<p class="advantages__desc">Дающее право преподавать робототехнику для детей 6-12 лет в образовательных учреждениях</p>
+						</li>
+						<li class="advantages__item">
+							<h3 class="advantages__subtitle">Знания</h3>
+							<p class="advantages__desc">По основам разработки учебно-методических комплексов
+								по робототехнике и программированию</p>
+						</li>
+						<li class="advantages__item">
+							<h3 class="advantages__subtitle">
+								Практику
+								<button class="advantages__tooltip tooltip" type="button" data-tooltip="tip">
+									<span>i</span>
+									<div class="tooltip__body">При наличии свободных мест</div>
+								</button>
+							</h3>
+							<p class="advantages__desc">Возможность пройти практику по преподаванию робототехники на базе R:ED LAB (в оффлайн или онлайн формате)</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="page__coaches coaches">
+				<div class="coaches__container">
+					<h2 class="coaches__title section-title">Профессиональ&shyные тренеры</h2>
+					<div class="coaches__slider slider-coaches" data-swiper>
+						<div class="slider-coaches__body">
+							<div class="slider-coaches__slide slide-coaches">
+								<div class="slide-coaches__img ibg">
+									<img src="@img/coaches/01.jpg" alt="Ирина Лайм">
+								</div>
+								<h3 class="slide-coaches__title">Ирина Лайм</h3>
+								<span class="slide-coaches__post">преподаватель по робототехнике</span>
+								<button class="slide-coaches__button" data-popup-open="coach">Подробнее</button>
+							</div>
+							<div class="slider-coaches__slide slide-coaches">
+								<div class="slide-coaches__img ibg">
+									<img src="@img/coaches/02.jpg" alt="Марина Орлова">
+								</div>
+								<h3 class="slide-coaches__title">Марина Орлова</h3>
+								<span class="slide-coaches__post">преподаватель по робототехнике</span>
+								<button class="slide-coaches__button">Подробнее</button>
+							</div>
+							<div class="slider-coaches__slide slide-coaches">
+								<div class="slide-coaches__img ibg">
+									<img src="@img/coaches/03.jpg" alt="Максим Петров">
+								</div>
+								<h3 class="slide-coaches__title">Максим Петров</h3>
+								<span class="slide-coaches__post">преподаватель по программированию</span>
+								<button class="slide-coaches__button">Подробнее</button>
+							</div>
+							<div class="slider-coaches__slide slide-coaches">
+								<div class="slide-coaches__img ibg">
+									<img src="@img/coaches/04.jpg" alt="Константин Назаров">
+								</div>
+								<h3 class="slide-coaches__title">Константин Назаров</h3>
+								<span class="slide-coaches__post">преподаватель по робототехнике</span>
+								<button class="slide-coaches__button">Подробнее</button>
+							</div>
+							<div class="slider-coaches__slide slide-coaches">
+								<div class="slide-coaches__img ibg">
+									<img src="@img/coaches/05.jpg" alt="Лиза Весенняя">
+								</div>
+								<h3 class="slide-coaches__title">Лиза Весенняя</h3>
+								<span class="slide-coaches__post">преподаватель по программированию</span>
+								<button class="slide-coaches__button">Подробнее</button>
+							</div>
+						</div>
+						<div class="slider-coaches__control">
+							<div class="slider-coaches__scrollbar" data-swiper-scrollbar>
+								<div class="slider-coaches__drag"></div>
+							</div>
+							<div class="slider-coaches__arrows" data-swiper-arrows>
+								<button class="slider-coaches__arrow" aria-label="Перейти к предыдущему слайду"></button>
+								<button class="slider-coaches__arrow" aria-label="Перейти к следующему слайду"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__price price">
+				<div class="price__container">
+					<h2 class="price__title section-title">Выберите нужный пакет</h2>
+					<ul class="price__list">
+						<li class="price__item item-price">
+							<h3 class="item-price__title">Pro</h3>
+							<div class="item-price__price" aria-label="20000 рублей">20.000 ₽</div>
+							<p class="item-price__desc">УМК по робототетхнике и программированию</p>
+							<button class="item-price__button button button--red">Оставить заявку</button>
+						</li>
+						<li class="price__item item-price">
+							<h3 class="item-price__title">Robo</h3>
+							<div class="item-price__price" aria-label="15000 рублей">15.000 ₽</div>
+							<p class="item-price__desc">УМК по робототетхнике</p>
+							<button class="item-price__button button button--red">Оставить заявку</button>
+						</li>
+						<li class="price__item item-price">
+							<h3 class="item-price__title">Prog</h3>
+							<div class="item-price__price" aria-label="10000 рублей">10.000 ₽</div>
+							<p class="item-price__desc">УМК по программированию</p>
+							<button class="item-price__button button button--red">Оставить заявку</button>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="page__callback callback">
+				<div class="callback__container">
+					<div class="callback__info">
+						<h2 class="callback__title">Запишитесь на курс со скидкой 10%</h2>
+						<div class="callback__desc">Акция действительна до 10 марта 2022 года</div>
+					</div>
+					<div class="callback__form">
+						<form action="" class="form">
+							<div class="form__item">
+								<label class="form__label">
+									<input type="text" class="form__input" name="name" placeholder="Имя" data-validate data-error="Имя обязательно">
+									<span class="visually-hidden">Введите имя</span>
+								</label>
+							</div>
+							<div class="form__item">
+								<label class="form__label">
+									<input type="tel" class="form__input" name="phone" placeholder="Телефон" data-validate data-error="Номер телефона не должен быть короче 11 символов">
+									<span class="visually-hidden">Введите телефон</span>
+								</label>
+							</div>
+							<div class="form__item">
+								<label class="form__label">
+									<input type="email" class="form__input" name="email" placeholder="E-mail" data-validate data-error="E-mail обязателен">
+									<span class="visually-hidden">Введите e-mail</span>
+								</label>
+							</div>
+							<button type="submit" class="form__button button button--dark" data-popup-open="form">Оформить заявку</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+		@@include('html/popup.html',{})
+	</div>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
